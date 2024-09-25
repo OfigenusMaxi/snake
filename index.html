@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <meta name=description content="Snake">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/game.css"/>
+
+    <script type="text/javascript" src="js/pixi.min.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+<div class="gameContainer">
+    <div class="game">
+        <canvas class="gameView">
+            Your browser does not support canvas element.
+        </canvas>
+    </div>
+    <div class="sidebar">
+        <div class="option_container">
+            <h1>Snake Game</h1>
+            <div class="score_container best_score">
+                <span>Best Score:</span> <span class="best_score_points">0</span>
+            </div>
+            <div class="score_container score">
+                <span>Current Score:</span> <span class="score_number">0</span>
+            </div>
+
+            <div class="game_mode">
+
+                <input type="radio" name="gameMode" value="classic" id="classic_mode" checked>
+                <label for="classic_mode">
+                    Classic
+                </label>
+
+                <input type="radio" name="gameMode" value="immortal" id="immortal_mode">
+                <label for="immortal_mode">
+                    No die
+                </label>
+
+                <input type="radio" name="gameMode" value="walls" id="walls_mode">
+                <label for="walls_mode">
+                    Walls
+                </label>
+
+                <input type="radio" name="gameMode" value="portal" id="portal_mode" disabled>
+                <label for="portal_mode">
+                    Portal
+                </label>
+
+                <input type="radio" name="gameMode" value="speed" id="speed_mode">
+                <label for="speed_mode">
+                    Speed
+                </label>
+            </div>
+        </div>
+
+
+        <div class="btn_controls">
+            <button id="menu" style="display: none;">Menu</button>
+            <button id="play">Play</button>
+            <button id="exit">Exit</button>
+        </div>
+    </div>
+</div>
+
+<div class="gameMenu gameOver">
+    <div class="table">
+        <div class="table_td">
+            <div class="gameMenu_box">
+                <div class="gameMenu_box_title">
+                    Game Over
+                </div>
+                <div class="gameMenu_box_content">
+                    <div class="gameMenu_box_points">
+                            <span class="gameMenu_box_points_label">
+                                Total Points:
+                            </span>
+                        <span class="gameMenu_box_points_number">0</span>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="gameOver_startButton btn">
+                        Ok
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gameMenu pause">
+    <div class="table">
+        <div class="table_td">
+            <div class="gameMenu_box">
+                <div class="gameMenu_box_title">
+                    Game Paused
+                </div>
+                <div class="gameMenu_box_content">
+                    <div class="gameMenu_box_points">
+                            <span class="gameMenu_box_points_label">
+                                Total Points:
+                            </span>
+                        <span class="gameMenu_box_points_number">0</span>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="pause_continueButton btn">
+                        Continue
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
